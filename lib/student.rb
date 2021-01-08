@@ -50,7 +50,7 @@ attr_accessor :id, :name, :grade
     name = row[1]
     grade = row[2]
     self.new(id, name, grade)
-  end 
+  end
 
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = ?"
@@ -61,5 +61,5 @@ attr_accessor :id, :name, :grade
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
-  
+
 end
