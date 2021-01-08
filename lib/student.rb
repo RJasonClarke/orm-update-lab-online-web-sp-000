@@ -22,7 +22,7 @@ attr_accessor :id, :name, :grade
   end
 
   def self.drop_table
-    DB[:conn].execute(DROP TABLE IF EXISTS students)
+    DB[:conn].execute("DROP TABLE IF EXISTS students")
   end
 
 
